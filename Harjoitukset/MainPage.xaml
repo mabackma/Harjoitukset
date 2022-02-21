@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Harjoitukset.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:Name="NavView" 
+					ItemInvoked="NavigationView_OnItemInvoked"
+					BackRequested="NavView_OnBackRequested"
+					IsSettingsVisible="False"
+					IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Harjoitus 1" />
+                <NavigationViewItem Content="Tehtävä 1" Icon="Document" Tag="Harjoitus11"/>
+                <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus12"/>
+                <NavigationViewItem Content="Tehtävä 3" Icon="Document" Tag="Harjoitus13"/>
+                <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus14"/>
+                <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus15"/>
+                <NavigationViewItemHeader Content="H1 Lisätehtävät" />
+                <NavigationViewItem Content="Tehtävä 6" Icon="Favorite" Tag="Harjoitus16"/>
+                <NavigationViewItem Content="Tehtävä 7" Icon="Favorite" Tag="Harjoitus17"/>
+                <NavigationViewItem Content="Tehtävä 8" Icon="Favorite" Tag="Harjoitus18"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Harjoitus 2" />
+                <NavigationViewItem Content="Tehtävä 1" Icon="Document" Tag="Harjoitus21"/>
+                <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus22"/>
+                <NavigationViewItem Content="Tehtävä 3" Icon="Document" Tag="Harjoitus23"/>
+                <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus24"/>
+                <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus25"/>
+                <NavigationViewItemHeader Content="H2 Lisätehtävät" />
+                <NavigationViewItem Content="Tehtävä 7" Icon="Favorite" Tag="Harjoitus27"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Harjoitus 3" />
+                <NavigationViewItem Content="Tehtävä 1a" Icon="Document" Tag="Harjoitus31a"/>
+                <NavigationViewItem Content="Tehtävä 1b" Icon="Document" Tag="Harjoitus31b"/>
+                <NavigationViewItemHeader Content="H3.1 Lisätehtävät" />
+                <NavigationViewItem Content="Tehtävä 1 lisätehtävä" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
+
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame" 
+			   NavigationFailed="ContentFrame_OnNavigationFailed"/>
+        </NavigationView>
+    </Grid>
+</Page>

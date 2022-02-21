@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus23"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <ListBox Name="list"
+                 Margin="20"                
+                 Width="200"
+                 HorizontalAlignment="Left"
+                 SelectionChanged="list_SelectionChanged">
+            <ListBoxItem>1</ListBoxItem>
+            <ListBoxItem>2</ListBoxItem>
+            <ListBoxItem>3</ListBoxItem>
+            <ListBoxItem>4</ListBoxItem>
+            <ListBoxItem>5</ListBoxItem>
+        </ListBox>
+        <ComboBox Name="combo"
+                  Margin="20"
+                  Width="200"
+                  RelativePanel.RightOf="list"
+                  SelectionChanged="combo_SelectionChanged">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <TextBlock Name="listValue" 
+                   Margin="20"  
+                   Width="200" 
+                   RelativePanel.Below="list"/>
+        <TextBlock Name="comboValue" 
+                   Margin="20"  
+                   Width="200"
+                   RelativePanel.Below="list"
+                   RelativePanel.RightOf="listValue"/>
+        <TextBlock Name="sum"
+                   RelativePanel.Below="list"
+                   RelativePanel.RightOf="comboValue">
+            Summa:
+        </TextBlock>
+        <TextBlock Name="totalValue" 
+                   Margin="20"  
+                   Width="200"
+                   RelativePanel.Below="list"
+                   RelativePanel.RightOf="comboValue"/>
+    </RelativePanel>
+</Page>

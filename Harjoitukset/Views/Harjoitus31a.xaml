@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus31a"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitus3.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=local:Harjoitus31a}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock Margin="20" 
+                   Text="{x:Bind PassWord, Mode=OneWay}"/>
+        <Button Name="passwd"
+                Margin="20" 
+                Click="passwd_Click">
+            TUOTA UUSI SALASANA
+        </Button>
+        <TextBlock Margin="20, 120, 20, 20">
+            Päivän turha fakta:
+        </TextBlock>
+        <TextBlock Margin="20" 
+                   TextWrapping="Wrap"
+                   Text="{x:Bind UselessFact, Mode=OneWay}"/>
+        <Button Name="fact"
+                Margin="20" 
+                Click="fact_Click">
+            Hae uusi turha fakta!
+        </Button>
+    </StackPanel>
+
+</Page>

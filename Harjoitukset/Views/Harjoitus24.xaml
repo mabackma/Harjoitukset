@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus24"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <RadioButton Grid.Row="0" 
+                     Grid.Column="0"
+                     Margin="20"
+                     Checked="RadioButton1_Checked"
+                     Unchecked="RadioButton1_Unchecked">
+            alle 18v
+        </RadioButton>
+        <CheckBox Grid.Row="0"
+                  Grid.Column="1"
+                  Checked="CheckBox1_Checked"
+                  Unchecked="CheckBox1_Unchecked">
+            Ajokortti
+        </CheckBox>
+        <RadioButton Grid.Row="1" 
+                     Grid.Column="0"
+                     Margin="20"
+                     Checked="RadioButton2_Checked"
+                     Unchecked="RadioButton2_Unchecked">
+            18-29v
+        </RadioButton>
+        <CheckBox Grid.Row="1"
+                  Grid.Column="1"
+                  Checked="CheckBox2_Checked"
+                  Unchecked="CheckBox2_Unchecked">
+            Työturvallisuuskortti
+        </CheckBox>
+        <RadioButton Grid.Row="2" 
+                     Grid.Column="0"
+                     Margin="20"
+                     Checked="RadioButton3_Checked"
+                     Unchecked="RadioButton3_Unchecked">
+            30v+
+        </RadioButton>
+        <CheckBox Grid.Row="2"
+                  Grid.Column="1"
+                  Checked="CheckBox3_Checked"
+                  Unchecked="CheckBox3_Unchecked">
+            Hygieniapassi
+        </CheckBox>
+        <TextBlock Name="ShowInfo"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Margin="20"></TextBlock>
+
+    </Grid>
+</Page>

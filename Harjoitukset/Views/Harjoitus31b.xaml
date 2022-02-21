@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus31b"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitus3.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=local:Harjoitus31b}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+
+        <Slider Name="slider1"
+                Grid.Row="0"
+                VerticalAlignment="Center"
+                Margin="50"
+                Value="{x:Bind Slider1Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Name="text1"
+                   Grid.Row="1"                  
+                   HorizontalAlignment="Center"
+                   Margin="20"
+                   Text="{x:Bind Slider1ValueToString(Slider1Value), Mode=OneWay}"/>
+        <ProgressBar Name="progress1"
+                     Grid.Row="2"
+                     Margin="20"
+                     Value="{x:Bind Slider1Value, Mode=OneWay}"/>
+    </Grid>
+</Page>

@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus31_lisa1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitus3.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=local:Harjoitus31_lisa1}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <ComboBox Width="150"
+                  Margin="20"
+                  SelectedItem="{x:Bind ComboValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <ComboBoxItem Tag="kuva1.jpg">kuva1.jpg</ComboBoxItem>
+            <ComboBoxItem Tag="kuva2.jpg">kuva2.jpg</ComboBoxItem>
+            <ComboBoxItem Tag="kuva3.jpg">kuva3.jpg</ComboBoxItem>
+        </ComboBox>
+        <Image Width="700" Source="{x:Bind ComboValueToSource(ComboValue.Tag), Mode=OneWay}"/>
+    </StackPanel>
+</Page>
