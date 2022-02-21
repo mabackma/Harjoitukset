@@ -29,7 +29,7 @@
                    Text="{x:Bind Slider1ValueToString(Slider1Value), Mode=OneWay}"/>
         <ProgressBar Name="progress1"
                      Grid.Row="2"
-                     Margin="20"
+                     Margin="50"
                      Value="{x:Bind Slider1Value, Mode=OneWay}"/>
     </Grid>
 </Page>

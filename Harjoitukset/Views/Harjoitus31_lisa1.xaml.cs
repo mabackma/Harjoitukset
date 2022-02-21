@@ -31,7 +31,6 @@ namespace Harjoitukset.Views
         }
 
         private ComboBoxItem cValue;
-        private object converter;
 
         public ComboBoxItem ComboValue
         {

@@ -25,6 +25,10 @@ namespace Harjoitukset.Views
         public Harjoitus25()
         {
             this.InitializeComponent();
+
+            // Laitetaan opacityn alkuarvoksi 0.
+            if (redSquare != null)
+                redSquare.Opacity = 0;
         }
 
         private void adjustOpacity_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)

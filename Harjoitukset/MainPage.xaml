@@ -40,7 +40,9 @@
                 <NavigationViewItem Content="Tehtävä 1a" Icon="Document" Tag="Harjoitus31a"/>
                 <NavigationViewItem Content="Tehtävä 1b" Icon="Document" Tag="Harjoitus31b"/>
                 <NavigationViewItemHeader Content="H3.1 Lisätehtävät" />
-                <NavigationViewItem Content="Tehtävä 1 lisätehtävä" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
+                <NavigationViewItem Content="Tehtävä 1 image valikko" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
+                <NavigationViewItem Content="Tehtävä 1 color valikko" Icon="Favorite" Tag="Harjoitus31_lisa2"/>
+                <NavigationViewItem Content="Tehtävä 1 tekstitiedosto" Icon="Favorite" Tag="Harjoitus31_lisa3"/>
 
             </NavigationView.MenuItems>
 

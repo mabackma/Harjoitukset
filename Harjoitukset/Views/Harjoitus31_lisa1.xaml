@@ -10,6 +10,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
+        <TextBlock Margin="20"
+                   FontWeight="Bold">
+            Valitse kuva:
+        </TextBlock>
         <ComboBox Width="150"
                   Margin="20"
                   SelectedItem="{x:Bind ComboValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
