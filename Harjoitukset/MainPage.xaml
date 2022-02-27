@@ -34,15 +34,15 @@
                 <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus24"/>
                 <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus25"/>
                 <NavigationViewItemHeader Content="H2 Lisätehtävät" />
-                <NavigationViewItem Content="Tehtävä 7" Icon="Favorite" Tag="Harjoitus27"/>
+                <NavigationViewItem Content="Tehtävä 7 Dark Mode" Icon="Favorite" Tag="Harjoitus27"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Harjoitus 3" />
                 <NavigationViewItem Content="Tehtävä 1a" Icon="Document" Tag="Harjoitus31a"/>
                 <NavigationViewItem Content="Tehtävä 1b" Icon="Document" Tag="Harjoitus31b"/>
                 <NavigationViewItemHeader Content="H3.1 Lisätehtävät" />
-                <NavigationViewItem Content="Tehtävä 1 image valikko" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
-                <NavigationViewItem Content="Tehtävä 1 color valikko" Icon="Favorite" Tag="Harjoitus31_lisa2"/>
-                <NavigationViewItem Content="Tehtävä 1 tekstitiedosto" Icon="Favorite" Tag="Harjoitus31_lisa3"/>
+                <NavigationViewItem Content="Tehtävä 1 Image valikko" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
+                <NavigationViewItem Content="Tehtävä 1 Color valikko" Icon="Favorite" Tag="Harjoitus31_lisa2"/>
+                <NavigationViewItem Content="Tehtävä 1 Tekstitiedosto" Icon="Favorite" Tag="Harjoitus31_lisa3"/>
 
             </NavigationView.MenuItems>
 

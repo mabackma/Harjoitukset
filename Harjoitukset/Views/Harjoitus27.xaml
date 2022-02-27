@@ -8,7 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <ToggleButton Margin="20" 
+                      Click="ToggleButton_Click">
+            Dark Mode
+        </ToggleButton>
+    </StackPanel>
 </Page>

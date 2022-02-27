@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,19 @@ namespace Harjoitukset.Views
         public Harjoitus27()
         {
             this.InitializeComponent();
+        }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Window.Current.Content is FrameworkElement frameworkElement)
+            {
+                String current = frameworkElement.RequestedTheme.ToString();
+
+                if (current == "Dark")
+                    frameworkElement.RequestedTheme = ElementTheme.Light;
+                else    
+                    frameworkElement.RequestedTheme = ElementTheme.Dark;
+            }
         }
     }
 }
