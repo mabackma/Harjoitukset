@@ -186,6 +186,12 @@
     <Compile Include="Views\Harjoitus31_lisa3.xaml.cs">
       <DependentUpon>Harjoitus31_lisa3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Harjoitus32.xaml.cs">
+      <DependentUpon>Harjoitus32.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Harjoitus33a.xaml.cs">
+      <DependentUpon>Harjoitus33a.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -196,6 +202,8 @@
     <Content Include="Assets\kuva1.jpg" />
     <Content Include="Assets\kuva2.jpg" />
     <Content Include="Assets\kuva3.jpg" />
+    <Content Include="Assets\kuva4.jpg" />
+    <Content Include="Assets\kuva5.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -298,10 +306,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Harjoitus32.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Harjoitus33a.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.1.2</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
