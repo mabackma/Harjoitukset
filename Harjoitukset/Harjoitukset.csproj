@@ -168,6 +168,9 @@
     <Compile Include="Views\Harjoitus28.xaml.cs">
       <DependentUpon>Harjoitus28.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Harjoitus29.xaml.cs">
+      <DependentUpon>Harjoitus29.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Harjoitus31a.xaml.cs">
       <DependentUpon>Harjoitus31a.xaml</DependentUpon>
     </Compile>
@@ -268,6 +271,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus28.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Harjoitus29.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -36,6 +36,7 @@
                 <NavigationViewItemHeader Content="H2 Lisätehtävät" />
                 <NavigationViewItem Content="Tehtävä 7 Dark Mode" Icon="Favorite" Tag="Harjoitus27"/>
                 <NavigationViewItem Content="Tehtävä 8 Sulje ohjelma" Icon="Favorite" Tag="Harjoitus28"/>
+                <NavigationViewItem Content="Tehtävä 9 Focus" Icon="Favorite" Tag="Harjoitus29"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Harjoitus 3" />
                 <NavigationViewItem Content="Tehtävä 1a" Icon="Document" Tag="Harjoitus31a"/>
