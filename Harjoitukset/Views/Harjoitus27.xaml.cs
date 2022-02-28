@@ -28,16 +28,17 @@ namespace Harjoitukset.Views
             this.InitializeComponent();
         }
 
-        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        private void dMode_Click(object sender, RoutedEventArgs e)
         {
             if (Window.Current.Content is FrameworkElement frameworkElement)
             {
-                String current = frameworkElement.RequestedTheme.ToString();
+                String currentTheme = frameworkElement.RequestedTheme.ToString();
 
-                if (current == "Dark")
+                // Laitetaan Dark mode päälle tai pois päältä.
+                if (currentTheme == "Dark")
                     frameworkElement.RequestedTheme = ElementTheme.Light;
-                else    
-                    frameworkElement.RequestedTheme = ElementTheme.Dark;
+                else
+                    frameworkElement.RequestedTheme = ElementTheme.Dark;        
             }
         }
     }
