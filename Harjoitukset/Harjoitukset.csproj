@@ -195,6 +195,9 @@
     <Compile Include="Views\Harjoitus33b.xaml.cs">
       <DependentUpon>Harjoitus33b.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Harjoitus33c.xaml.cs">
+      <DependentUpon>Harjoitus33c.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -318,6 +321,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus33b.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Harjoitus33c.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -30,9 +30,10 @@
         <Border Name="ShadowTarget"/>
         <TextBlock ui:Effects.Shadow="{StaticResource textShadow}"
                    Grid.Row="0"
-                   Text="Tällä tekstillä on varjo!"
+                   Text="Alla olevalla laatikolla on pidempi varjo kuin tällä tekstillä:"
                    FontSize="60"
                    FontWeight="Bold"
+                   TextWrapping="Wrap"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
         <Rectangle ui:Effects.Shadow="{StaticResource rectangleShadow}"
