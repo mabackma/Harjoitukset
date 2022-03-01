@@ -46,6 +46,7 @@
                 <NavigationViewItem Content="Lisätehtävä  Tekstitiedosto" Icon="Favorite" Tag="Harjoitus31_lisa3"/>
                 <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus32"/>
                 <NavigationViewItem Content="Tehtävä 3 Carousel" Icon="Document" Tag="Harjoitus33a"/>
+                <NavigationViewItem Content="Tehtävä 3 Attached Shadows" Icon="Document" Tag="Harjoitus33b"/>
 
             </NavigationView.MenuItems>
 
