@@ -20,7 +20,7 @@
         <TextBlock Name="timeText"
                        Margin="20, 20, 0, 0"
                        RelativePanel.RightOf="pickDate">
-                Valitse aika ja tulosta valinnat:
+                Valitse kellonaika:
         </TextBlock>
         <TimePicker Name="pickTime" 
                         Margin="20, 0, 0, 0"

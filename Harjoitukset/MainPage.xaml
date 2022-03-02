@@ -26,6 +26,7 @@
                 <NavigationViewItem Content="Tehtävä 6" Icon="Favorite" Tag="Harjoitus16"/>
                 <NavigationViewItem Content="Tehtävä 7" Icon="Favorite" Tag="Harjoitus17"/>
                 <NavigationViewItem Content="Tehtävä 8" Icon="Favorite" Tag="Harjoitus18"/>
+                <NavigationViewItem Content="Tehtävä 9 MediaElement" Icon="Favorite" Tag="Harjoitus19c"/>
                 <NavigationViewItem Content="Tehtävä 9 WebView" Icon="Favorite" Tag="Harjoitus19a"/>
                 <NavigationViewItem Content="Tehtävä 9 DatePicker" Icon="Favorite" Tag="Harjoitus19b"/>
                 <NavigationViewItemSeparator/>
