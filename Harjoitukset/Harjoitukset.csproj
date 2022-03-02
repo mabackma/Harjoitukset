@@ -162,6 +162,9 @@
     <Compile Include="Views\Harjoitus21.xaml.cs">
       <DependentUpon>Harjoitus21.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Harjoitus210.xaml.cs">
+      <DependentUpon>Harjoitus210.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Harjoitus22.xaml.cs">
       <DependentUpon>Harjoitus22.xaml</DependentUpon>
     </Compile>
@@ -217,6 +220,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\blank.jpg" />
     <Content Include="Assets\kuva1.jpg" />
     <Content Include="Assets\kuva2.jpg" />
     <Content Include="Assets\kuva3.jpg" />
@@ -291,6 +295,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus21.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Harjoitus210.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
