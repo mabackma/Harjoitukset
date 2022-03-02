@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus19b"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <TextBlock Name="dateText"
+                       Margin="20, 20, 0, 0">
+                Valitse päivämäärä:
+        </TextBlock>
+        <DatePicker Name="pickDate"
+                        Margin="20, 0, 0, 0"
+                        RelativePanel.Below="dateText"
+                        SelectedDateChanged="pickDate_SelectedDateChanged"/>
+        <TextBlock Name="timeText"
+                       Margin="20, 20, 0, 0"
+                       RelativePanel.RightOf="pickDate">
+                Valitse aika ja tulosta valinnat:
+        </TextBlock>
+        <TimePicker Name="pickTime" 
+                        Margin="20, 0, 0, 0"
+                        RelativePanel.Below="timeText"
+                        RelativePanel.RightOf="pickDate"
+                        SelectedTimeChanged="pickTime_SelectedTimeChanged"/>
+        <TextBlock Name="dateAndTime"
+                       Margin="50, 10, 0, 0"
+                       RelativePanel.RightOf="pickTime"
+                       RelativePanel.Below="timeText"/>
+    </RelativePanel>
+</Page>
