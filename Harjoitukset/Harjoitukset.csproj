@@ -201,9 +201,6 @@
     <Compile Include="Views\Harjoitus31_lisa3.xaml.cs">
       <DependentUpon>Harjoitus31_lisa3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Harjoitus32.xaml.cs">
-      <DependentUpon>Harjoitus32.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Harjoitus33a.xaml.cs">
       <DependentUpon>Harjoitus33a.xaml</DependentUpon>
     </Compile>
@@ -347,10 +344,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus31_lisa3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Harjoitus32.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

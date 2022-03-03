@@ -47,7 +47,7 @@ namespace Harjoitukset.Views
             // Jos raahattava tapahtuma sisältää jotain järkevää dataa...
             if (e.DataView.Contains(StandardDataFormats.StorageItems))
             {
-                //... niin haetaan data Images muuttujaan
+                //... niin haetaan data images muuttujaan
                 var images = await e.DataView.GetStorageItemsAsync();
                 
                 if (images.Any())
