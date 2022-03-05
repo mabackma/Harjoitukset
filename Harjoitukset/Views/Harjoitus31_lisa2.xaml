@@ -22,6 +22,7 @@
             <ComboBoxItem Tag="Red">Punainen</ComboBoxItem>
             <ComboBoxItem Tag="Purple">Violetti</ComboBoxItem>
             <ComboBoxItem Tag="Blue">Sininen</ComboBoxItem>
+            <ComboBoxItem Visibility="Collapsed" Name="initialColor" Tag="Black"></ComboBoxItem>  <!--Alkuarvona on musta väri-->
         </ComboBox>
         <Rectangle Margin="20"
                    Width="200"

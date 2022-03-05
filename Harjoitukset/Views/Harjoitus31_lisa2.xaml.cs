@@ -28,6 +28,9 @@ namespace Harjoitukset.Views
         public Harjoitus31_lisa2()
         {
             this.InitializeComponent();
+
+            // Asetetaan laatikon väri mustaksi.
+            ColorValue = initialColor;
         }
 
         private ComboBoxItem coValue;
