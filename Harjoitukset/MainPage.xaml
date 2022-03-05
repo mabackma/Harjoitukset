@@ -50,6 +50,7 @@
                 <NavigationViewItem Content="Image valikko" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
                 <NavigationViewItem Content="Color valikko" Icon="Favorite" Tag="Harjoitus31_lisa2"/>
                 <NavigationViewItem Content="Tiedostoon kirjoittaminen" Icon="Favorite" Tag="Harjoitus31_lisa3"/>
+                <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus32"/>
                 <NavigationViewItem Content="Tehtävä 3:"/>
                 <NavigationViewItem Content="Carousel" Icon="Document" Tag="Harjoitus33a"/>
                 <NavigationViewItem Content="Attached Shadows" Icon="Document" Tag="Harjoitus33b"/>
