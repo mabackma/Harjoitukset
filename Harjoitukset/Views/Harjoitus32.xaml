@@ -10,17 +10,43 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="EventsListView" ItemsSource="{x:Bind ViewModel.Events}">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local_root:Event">
-                    <StackPanel Orientation="Horizontal" Margin="6">
-                        <SymbolIcon Symbol="CalendarDay" Margin="0,0,12,0"/>
-                        <StackPanel>
-                            <TextBlock Text="{x:Bind OneLineSummary}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="130"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" >
+            <TextBlock Margin="20, 0, 0, 0"
+                       FontWeight="Bold">
+                My Helsinki Events:
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+                (klikkaa tapahtumaa saadaksesi lisätiedot)
+            </TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <ListView x:Name="EventsListView" ItemsSource="{x:Bind ViewModel.Events}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local_root:Event">
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <SymbolIcon Symbol="CalendarDay" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="{x:Bind OneLineSummary}"/>
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" DataContext="{Binding SelectedItem, ElementName=EventsListView}" Margin="20,0,0,20">
+            <TextBlock Text="{Binding EvTime}"/>
+            <TextBlock Text="{Binding EvName}"/>
+            <TextBlock Text="{Binding EvAddress}"/>
+            <TextBlock Text="{Binding EvCategories}"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

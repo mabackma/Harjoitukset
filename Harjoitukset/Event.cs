@@ -12,6 +12,7 @@ namespace Harjoitukset
 		public string EvName { get; set; }
 		public string EvAddress { get; set; }
 		public string EvTime { get; set; }
+		public string EvCategories { get; set; }
 
 		public Event()
 		{
@@ -19,6 +20,7 @@ namespace Harjoitukset
 			this.EvName = "No artist";
 			this.EvAddress = "No album";
 			this.EvTime = "No date";
+			this.EvCategories = "No categories";
 		}
 
 		// apuproperty, jonka avulla saadaan yhteenveto levyn tiedoista
@@ -26,7 +28,7 @@ namespace Harjoitukset
 		{
 			get
 			{
-				return $"{this.EvTime} {this.EvName} - {this.EvAddress}";
+				return $"{this.EvTime} {this.EvName}";
 			}
 		}
 	}

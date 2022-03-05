@@ -43,18 +43,28 @@ namespace Harjoitukset
 				JsonValue addressValue = obj.GetNamedValue("address");
 				JsonObject addressObj = addressValue.GetObject() as JsonObject;
 
+				// Tuodaan JsonObjektista kategoria tiedot string muuttujaan.
+				string categories = obj.GetNamedValue("categories").ToString();
+
+				// Siistitään kategoria muuttujasta ylimääräiset merkit pois.
+				categories = categories.Replace("\"", string.Empty);
+				categories = categories.Replace("[", string.Empty);
+				categories = categories.Replace("]", string.Empty);
+				categories = categories.Replace(",", ", ");
+
 				// Siistitään tapahtuman tiedot ja sijoitetaan ne string muuttujiin
 				string name = obj.GetNamedValue("name").ToString().Replace("\"", string.Empty);
 				string street = addressObj.GetNamedValue("street_address").ToString().Replace("\"", string.Empty);
 				string postal = addressObj.GetNamedValue("postal_code").ToString().Replace("\"", string.Empty);
 				string time = obj.GetNamedValue("date").ToString().Replace("\"", string.Empty);
 
-				// Lisätään string muuttujat tapahtuman tietoihin ja lisätään tapahtuma events kokoelmaan.
+				// Lisätään kaikki muuttujat tapahtuman tietoihin ja lisätään tapahtuma events kokoelmaan.
 				this.events.Add(new Event()
 				{
 					EvName = name,
 					EvAddress = street + ", " + postal,
-					EvTime = time
+					EvTime = time,
+					EvCategories = "Kategoriat: " + categories
 				});
 
 			}
