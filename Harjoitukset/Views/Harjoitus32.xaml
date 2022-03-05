@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
@@ -42,8 +42,8 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" DataContext="{Binding SelectedItem, ElementName=EventsListView}" Margin="20,0,0,20">
-            <TextBlock Text="{Binding EvTime}"/>
-            <TextBlock Text="{Binding EvName}"/>
+            <TextBlock FontWeight="Bold" Text="{Binding EvTime}"/>
+            <TextBlock FontWeight="Bold" Text="{Binding EvName}"/>
             <TextBlock Text="{Binding EvAddress}"/>
             <TextBlock Text="{Binding EvCategories}"/>
         </StackPanel>
