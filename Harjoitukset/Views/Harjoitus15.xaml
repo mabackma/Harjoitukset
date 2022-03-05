@@ -21,19 +21,17 @@
             <ComboBoxItem>Punainen</ComboBoxItem>
         </ComboBox>
 
-        <TextBlock Margin="30"
-                   RelativePanel.Below="myColors"
-                   Name="colorName" 
-                   Text="Väri">
-        </TextBlock>
-
-        <Rectangle Margin="30"
-                   Width="100"
-                   Height="100" 
-                   RelativePanel.Below="myColors"
-                   RelativePanel.RightOf="colorName"
-                   Name="colorBox"
-                   Fill="Black"/>
+        <Border Margin="30"
+                Width="100"
+                Height="100" 
+                RelativePanel.Below="myColors" 
+                Name="colorBox"
+                Background="Black">
+            <TextBlock Name="colorName"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text=""/>
+        </Border>
 
     </RelativePanel>
 </Page>

@@ -42,25 +42,26 @@ namespace Harjoitukset.Views
             // Haetaan valittu väri String muuttujaan
             String value = item.Content as String;
 
-            colorName.Text = value + ":";
+            // Annetaan TextBlockille värin nimi.
+            colorName.Text = value;
 
-            //Väritetään laatikko valitulla värillä
+            // Väritetään laatikko valitulla värillä
             switch (value)
             {
                 case "Sininen":
-                    colorBox.Fill = new SolidColorBrush(Colors.Blue);
+                    colorBox.Background = new SolidColorBrush(Colors.Blue);
                     break;
                 case "Vihreä":
-                    colorBox.Fill = new SolidColorBrush(Colors.Green);
+                    colorBox.Background = new SolidColorBrush(Colors.Green);
                     break;
                 case "Keltainen":
-                    colorBox.Fill = new SolidColorBrush(Colors.Yellow);
+                    colorBox.Background = new SolidColorBrush(Colors.Yellow);
                     break;
                 case "Oranssi":
-                    colorBox.Fill = new SolidColorBrush(Colors.Orange);
+                    colorBox.Background = new SolidColorBrush(Colors.Orange);
                     break;
                 case "Punainen":
-                    colorBox.Fill = new SolidColorBrush(Colors.Red);
+                    colorBox.Background = new SolidColorBrush(Colors.Red);
                     break;
             }
 
