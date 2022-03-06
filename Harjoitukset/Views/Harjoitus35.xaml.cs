@@ -81,6 +81,10 @@ namespace Harjoitukset.Views
             catch (WebException)
             {
                 this.InitializeComponent();
+                details1.Text = "";
+                details2.Text = "";
+                details3.Text = "";
+                details4.Text = "";
             }
 
         }
