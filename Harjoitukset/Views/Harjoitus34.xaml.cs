@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Data.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -16,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Harjoitukset.Views
@@ -23,35 +23,44 @@ namespace Harjoitukset.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Harjoitus31_lisa1 : Page, INotifyPropertyChanged
+    public sealed partial class Harjoitus34 : Page, INotifyPropertyChanged      // Tämä pitää muistaa bindingissa jonka arvoa käyttäjä voi itse muuttaa!!!
     {
-        public Harjoitus31_lisa1()
+        public Harjoitus34()
         {
             this.InitializeComponent();
         }
 
-        private ComboBoxItem cValue;
+        private DateTimeOffset dValue;
 
-        public ComboBoxItem ComboValue
+        public DateTimeOffset DateValue
         {
             get
             {
-                return cValue;
+                return dValue;
             }
 
             set
             {
-                cValue = value;
-                OnPropertyChanged("ComboValue");
+                dValue = value;
+                OnPropertyChanged("DateValue");
             }
         }
 
-        // Function Binding metodi joka hakee kuvan ComboBoxItem.Tagin arvosta.
-        public ImageSource ComboValueToSource(object orig)
+        // Function Binding metodi joka hakee kuvan DateTimeOffset muuuttujasta.
+        public ImageSource ShowImage(DateTimeOffset d)
         {
             // Luodaan tekstimuuttuja kuvan sijainnille.
-            String value = orig as String;
-            String imagePath = "../Assets/" + value;
+            String imagePath = "../Assets/";
+
+            // Kuva valitaan kuukauden perusteella.
+            if (d.Month > 2 && d.Month <= 5)
+                imagePath += "kevat.jpg";
+            else if (d.Month > 5 && d.Month <= 8)
+                imagePath += "kesa.jpg";
+            else if (d.Month > 8 && d.Month <= 11)
+                imagePath += "syksy.jpg";
+            else
+                imagePath += "talvi.jpg";
 
             // Muutetaan teksti kuvaksi ja palautetaan se image-controliin.
             return StringToImage(imagePath);

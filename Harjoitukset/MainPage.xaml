@@ -16,13 +16,13 @@
 					IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
 
             <NavigationView.MenuItems>
-                <NavigationViewItemHeader Content="Harjoitus 1" />
+                <NavigationViewItemHeader Content="Harjoitus 1"/>
                 <NavigationViewItem Content="Tehtävä 1" Icon="Document" Tag="Harjoitus11"/>
                 <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus12"/>
                 <NavigationViewItem Content="Tehtävä 3" Icon="Document" Tag="Harjoitus13"/>
                 <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus14"/>
                 <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus15"/>
-                <NavigationViewItemHeader Content="H1 Lisätehtävät" />
+                <NavigationViewItemHeader Content="H1 Lisätehtävät"/>
                 <NavigationViewItem Content="T6 Laskimen ulkoasu" Icon="Favorite" Tag="Harjoitus16"/>
                 <NavigationViewItem Content="T7 Random nappi" Icon="Favorite" Tag="Harjoitus17"/>
                 <NavigationViewItem Content="T8 Laskimen lisätoiminnot" Icon="Favorite" Tag="Harjoitus18"/>
@@ -32,19 +32,19 @@
                 <NavigationViewItem Content="Canvas"  Icon="Favorite" Tag="Harjoitus19d"/>
                 <NavigationViewItem Content="DatePicker"  Icon="Favorite" Tag="Harjoitus19b"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Harjoitus 2" />
+                <NavigationViewItemHeader Content="Harjoitus 2"/>
                 <NavigationViewItem Content="Tehtävä 1" Icon="Document" Tag="Harjoitus21"/>
                 <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus22"/>
                 <NavigationViewItem Content="Tehtävä 3" Icon="Document" Tag="Harjoitus23"/>
                 <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus24"/>
                 <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus25"/>
-                <NavigationViewItemHeader Content="H2 Lisätehtävät" />
+                <NavigationViewItemHeader Content="H2 Lisätehtävät"/>
                 <NavigationViewItem Content="T7 Dark Mode" Icon="Favorite" Tag="Harjoitus27"/>
                 <NavigationViewItem Content="T8 Sulje ohjelma" Icon="Favorite" Tag="Harjoitus28"/>
                 <NavigationViewItem Content="T9 Focus" Icon="Favorite" Tag="Harjoitus29"/>
                 <NavigationViewItem Content="T10 Drag and Drop" Icon="Favorite" Tag="Harjoitus210"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Harjoitus 3" />
+                <NavigationViewItemHeader Content="Harjoitus 3"/>
                 <NavigationViewItem Content="Tehtävä 1a" Icon="Document" Tag="Harjoitus31a"/>
                 <NavigationViewItem Content="Tehtävä 1b" Icon="Document" Tag="Harjoitus31b"/>
                 <NavigationViewItem Content="Image valikko" Icon="Favorite" Tag="Harjoitus31_lisa1"/>
@@ -55,6 +55,9 @@
                 <NavigationViewItem Content="Carousel" Icon="Document" Tag="Harjoitus33a"/>
                 <NavigationViewItem Content="Attached Shadows" Icon="Document" Tag="Harjoitus33b"/>
                 <NavigationViewItem Content="Eyedropper" Icon="Document" Tag="Harjoitus33c"/>
+                <NavigationViewItemHeader Content="H3 Lisätehtävät"/>
+                <NavigationViewItem Content="T1 DatePicker Vuodenajat" Icon="Favorite" Tag="Harjoitus34"/>
+                <NavigationViewItem Content="T2 JSON Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
 
             </NavigationView.MenuItems>
 

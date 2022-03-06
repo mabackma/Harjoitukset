@@ -47,9 +47,9 @@ namespace Harjoitukset
 				string categories = obj.GetNamedValue("categories").ToString();
 
 				// Siistitään kategoria muuttujasta ylimääräiset merkit pois.
-				categories = categories.Replace("\"", string.Empty);
-				categories = categories.Replace("[", string.Empty);
-				categories = categories.Replace("]", string.Empty);
+				categories = categories.Replace("\"", "");
+				categories = categories.Replace("[", "");
+				categories = categories.Replace("]", "");
 				categories = categories.Replace(",", ", ");
 
 				// Lisätään kaikki tiedot tapahtumaan ja lisätään tapahtuma events kokoelmaan.
