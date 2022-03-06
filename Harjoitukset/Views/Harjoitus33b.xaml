@@ -8,16 +8,15 @@
     mc:Ignorable="d"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
-    xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
         
         <!-- Tekstin varjo-->
-        <ui:AttachedDropShadow x:Key="textShadow" Offset="5" CastTo="{x:Bind ShadowTarget}"/>
+        <ui:AttachedDropShadow x:Key="textShadow" Offset = "5" CastTo="{x:Bind ShadowTarget}"/>
         
         <!-- Laatikon varjo joka ulottuu paljon pidemmälle-->
-        <ui:AttachedDropShadow x:Key="rectangleShadow" Offset="50" CastTo="{x:Bind ShadowTarget}"/>
+        <ui:AttachedDropShadow x:Key="rectangleShadow" Offset = "50" CastTo="{x:Bind ShadowTarget}"/>
         
     </Page.Resources>
 
