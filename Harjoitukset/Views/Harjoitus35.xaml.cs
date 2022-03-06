@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Data.Json;
 using Windows.Foundation;
@@ -36,43 +38,51 @@ namespace Harjoitukset.Views
             // String muuttuja dataa varten.
             string contents = "";
 
-            // Haetaan nettisoitteesta data string muuttujaan.
-            using (var wc = new System.Net.WebClient())
-                contents = wc.DownloadString(url);
+            try
+            {
+                // Haetaan nettisoitteesta data string muuttujaan.
+                using (var wc = new System.Net.WebClient())
+                    contents = wc.DownloadString(url);
 
-            // Laitetaan string muuttujasta tapahtumat JsonArray taulukkoon.
-            JsonArray countryDetails = JsonArray.Parse(contents);
+                // Laitetaan string muuttujasta tapahtumat JsonArray taulukkoon.
+                JsonArray countryDetails = JsonArray.Parse(contents);
 
-            // Tehdään ensimmäisestä JsonValuesta JsonObject muuttuja (JsonArray countryDetails sisältää vain yhden alkion).
-            JsonValue objvalue = (JsonValue)countryDetails[0];
-            JsonObject obj = objvalue.GetObject() as JsonObject;
+                // Tehdään ensimmäisestä JsonValuesta JsonObject muuttuja (JsonArray countryDetails sisältää vain yhden alkion).
+                JsonValue objvalue = (JsonValue)countryDetails[0];
+                JsonObject obj = objvalue.GetObject() as JsonObject;
 
-            // Haetaan maa-, väkiluku- ja puhelin muuttujille tiedot JsonObjectista.
-            string country = obj.GetNamedString("name");
-            string population = obj.GetNamedValue("population").ToString();
-            string phone = "+" + obj.GetNamedValue("callingCodes").ToString(); 
+                // Haetaan maa-, väkiluku- ja puhelin muuttujille tiedot JsonObjectista.
+                string country = obj.GetNamedString("name");
+                string population = obj.GetNamedValue("population").ToString();
+                string phone = "+" + obj.GetNamedValue("callingCodes").ToString();
 
-            // Siistitään puhelinnumeroa.
-            phone = phone.Replace("[", "");
-            phone = phone.Replace("]", "");
-            phone = phone.Replace("\"", "");
+                // Siistitään puhelinnumeroa.
+                phone = phone.Replace("[", "");
+                phone = phone.Replace("]", "");
+                phone = phone.Replace("\"", "");
 
-            // Tehdään currencies arvosta JsonArray.
-            string currencyContents = obj.GetNamedValue("currencies").ToString();
-            JsonArray currencyDetails = JsonArray.Parse(currencyContents);
+                // Tehdään currencies arvosta JsonArray.
+                string currencyContents = obj.GetNamedValue("currencies").ToString();
+                JsonArray currencyDetails = JsonArray.Parse(currencyContents);
 
-            // JsonArray currencyDetails sisältää vain yhden alkion.
-            JsonValue currencyObjvalue = (JsonValue)currencyDetails[0];
-            JsonObject currencyObj = currencyObjvalue.GetObject() as JsonObject;
+                // JsonArray currencyDetails sisältää vain yhden alkion.
+                JsonValue currencyObjvalue = (JsonValue)currencyDetails[0];
+                JsonObject currencyObj = currencyObjvalue.GetObject() as JsonObject;
 
-            // Haetaan valuuttamuutujalle arvo JsonObjectista.
-            string currency = currencyObj.GetNamedString("name") + " (" + currencyObj.GetNamedString("symbol") + ")";
+                // Haetaan valuuttamuutujalle arvo JsonObjectista.
+                string currency = currencyObj.GetNamedString("name") + " (" + currencyObj.GetNamedString("symbol") + ")";
 
-            // Tulostetaan tiedot tekstikenttiin.
-            details1.Text = country;
-            details2.Text = population;
-            details3.Text = phone;
-            details4.Text = currency;
+                // Tulostetaan tiedot tekstikenttiin.
+                details1.Text = country;
+                details2.Text = population;
+                details3.Text = phone;
+                details4.Text = currency;
+            }
+            catch (WebException)
+            {
+                this.InitializeComponent();
+            }
+
         }
     }
 }
