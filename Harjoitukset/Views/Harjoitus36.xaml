@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus36"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:local_root="using:Harjoitukset"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+ 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="350"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" >
+            <TextBlock Margin="20, 0, 0, 0"
+                       FontWeight="Bold"
+                       FontSize="30">
+                Klikkaa kaupunkia saadaksesi säätietoja
+            </TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <ListView x:Name="WeathersListView" ItemsSource="{x:Bind ViewModel.Weathers}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local_root:Weather">
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <SymbolIcon Symbol="Street" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="{x:Bind Summary}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <RelativePanel Grid.Row="2" DataContext="{Binding SelectedItem, ElementName=WeathersListView}" Margin="20,0,0,20">
+            <TextBlock Name="locationDescription"
+                       Margin="0, 20, 0, 0"
+                       FontSize="50"
+                       FontWeight="Bold"
+                       Text="{Binding Location}"/>
+            <TextBlock Name="snow"
+                       FontWeight="Bold"
+                       Text="Lumi:"
+                       RelativePanel.Below="locationDescription"/>
+            <controls:RadialGauge Name="snowDescription"
+                                  Margin="20"
+                                  RelativePanel.Below="locationDescription"
+                                  RelativePanel.RightOf="snow"
+                                  Width="250"
+                                  NeedleWidth="2" 
+                                  TickWidth="3"
+                                  TickLength="12"
+                                  TickBrush="black"
+                                  Minimum="0"
+                                  Maximum="100"
+                                  TickSpacing="10"
+                                  ScaleBrush="DarkGray"
+                                  Unit="cm"
+                                  ScaleWidth="10"
+                                  Value="{Binding Snow}"/>
+            <TextBlock Name="rain"
+                       RelativePanel.RightOf="snowDescription"
+                       FontWeight="Bold"
+                       Text="Sade:"
+                       RelativePanel.Below="locationDescription"/>
+            <controls:RadialGauge Name="rainDescription"
+                                  Margin="20"
+                                  RelativePanel.Below="locationDescription"
+                                  RelativePanel.RightOf="rain"
+                                  Width="250"
+                                  NeedleWidth="2" 
+                                  TickWidth="3"
+                                  TickLength="12"
+                                  TickBrush="black"
+                                  Minimum="0"
+                                  Maximum="10"
+                                  TickSpacing="2"
+                                  ScaleBrush="DarkGray"
+                                  Unit="mm"
+                                  ScaleWidth="10"
+                                  Value="{Binding Rain}"/>
+            <TextBlock Name="wind"
+                       RelativePanel.RightOf="rainDescription"
+                       FontWeight="Bold"
+                       Text="Tuuli:"
+                       RelativePanel.Below="locationDescription"/>
+            <controls:RadialGauge Name="windDescription"
+                                  Margin="20"
+                                  RelativePanel.Below="locationDescription"
+                                  RelativePanel.RightOf="wind"
+                                  Width="250"
+                                  NeedleWidth="2" 
+                                  TickWidth="3"
+                                  TickLength="12"
+                                  TickBrush="black"
+                                  Minimum="0"
+                                  Maximum="50"
+                                  TickSpacing="10"
+                                  ScaleBrush="DarkGray"
+                                  Unit="m/s"
+                                  ScaleWidth="30"
+                                  Value="{Binding Wind}"/>
+        </RelativePanel>
+    </Grid>
+</Page>

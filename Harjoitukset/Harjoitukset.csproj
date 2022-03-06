@@ -221,6 +221,11 @@
     <Compile Include="Views\Harjoitus35.xaml.cs">
       <DependentUpon>Harjoitus35.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Harjoitus36.xaml.cs">
+      <DependentUpon>Harjoitus36.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weather.cs" />
+    <Compile Include="WeatherViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -383,6 +388,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus35.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Harjoitus36.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

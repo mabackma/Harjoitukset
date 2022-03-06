@@ -56,8 +56,9 @@
                 <NavigationViewItem Content="Attached Shadows" Icon="Document" Tag="Harjoitus33b"/>
                 <NavigationViewItem Content="Eyedropper" Icon="Document" Tag="Harjoitus33c"/>
                 <NavigationViewItemHeader Content="H3 Lisätehtävät"/>
-                <NavigationViewItem Content="T1 DatePicker Vuodenajat" Icon="Favorite" Tag="Harjoitus34"/>
-                <NavigationViewItem Content="T2 JSON Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
+                <NavigationViewItem Content="T1 DatePicker: Vuodenajat" Icon="Favorite" Tag="Harjoitus34"/>
+                <NavigationViewItem Content="T2 JSON: Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
+                <NavigationViewItem Content="T3 Binding: RadialGauge" Icon="Favorite" Tag="Harjoitus36"/>
 
             </NavigationView.MenuItems>
 
