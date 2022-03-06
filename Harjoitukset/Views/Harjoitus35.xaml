@@ -8,7 +8,65 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <RelativePanel>
+        <TextBox Name="countryInput"
+                 Margin="20"
+                 Width="200"
+                 HorizontalAlignment="Center"/>
+        <Button Name="showDetails"
+                Margin="20"
+                HorizontalAlignment="Center"
+                RelativePanel.Below="countryInput"
+                Click="showDetails_Click">
+            Hae valtion tiedot
+        </Button>
+        <TextBlock Name="nameDetail"
+                   Margin="20"
+                   Width="300"
+                   FontWeight="Bold"
+                   RelativePanel.Below="showDetails">
+            Valtion nimi
+        </TextBlock>
+        <TextBlock Name="details1"
+                   Margin="20"
+                   RelativePanel.Below="showDetails"
+                   RelativePanel.RightOf="nameDetail"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Name="populationDetail"
+                   Margin="20"
+                   Width="300"
+                   FontWeight="Bold"
+                   RelativePanel.Below="nameDetail">
+            Väkiluku
+        </TextBlock>
+        <TextBlock Name="details2"
+                   Margin="20"
+                   RelativePanel.Below="nameDetail"
+                   RelativePanel.RightOf="populationDetail"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Name="phoneDetail"
+                   Margin="20"
+                   Width="300"
+                   FontWeight="Bold"
+                   RelativePanel.Below="populationDetail">
+            Puhelinnumeron etuosa
+        </TextBlock>
+        <TextBlock Name="details3"
+                   Margin="20"
+                   RelativePanel.Below="populationDetail"
+                   RelativePanel.RightOf="phoneDetail"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Name="currencyDetail"
+                   Margin="20"
+                   Width="300"
+                   FontWeight="Bold"
+                   RelativePanel.Below="phoneDetail">
+            Valuutta
+        </TextBlock>
+        <TextBlock Name="details4"
+                   Margin="20"
+                   RelativePanel.Below="phoneDetail"
+                   RelativePanel.RightOf="currencyDetail"
+                   HorizontalAlignment="Center"/>
+    </RelativePanel>
 </Page>

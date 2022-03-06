@@ -13,10 +13,10 @@
     <Page.Resources>
         
         <!-- Tekstin varjo-->
-        <ui:AttachedDropShadow x:Key="textShadow" Offset = "5" CastTo="{x:Bind ShadowTarget}"/>
+        <ui:AttachedDropShadow x:Key="textShadow" Offset="5" CastTo="{x:Bind ShadowTarget}"/>
         
         <!-- Laatikon varjo joka ulottuu paljon pidemmälle-->
-        <ui:AttachedDropShadow x:Key="rectangleShadow" Offset = "50" CastTo="{x:Bind ShadowTarget}"/>
+        <ui:AttachedDropShadow x:Key="rectangleShadow" Offset="50" CastTo="{x:Bind ShadowTarget}"/>
         
     </Page.Resources>
 
