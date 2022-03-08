@@ -80,7 +80,7 @@ namespace Harjoitukset.Views
             }
             catch (WebException)
             {
-                this.InitializeComponent();
+                // Tyhjennetään tekstikentät.
                 details1.Text = "";
                 details2.Text = "";
                 details3.Text = "";

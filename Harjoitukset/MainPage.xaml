@@ -59,6 +59,7 @@
                 <NavigationViewItem Content="T1 DatePicker: Vuodenajat" Icon="Favorite" Tag="Harjoitus34"/>
                 <NavigationViewItem Content="T2 JSON: Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
                 <NavigationViewItem Content="T3 Binding: RadialGauge" Icon="Favorite" Tag="Harjoitus36"/>
+                <NavigationViewItem Content="T3 JSON: Tallennus" Icon="Favorite" Tag="Harjoitus37"/>
 
             </NavigationView.MenuItems>
 
