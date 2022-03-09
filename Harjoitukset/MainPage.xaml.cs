@@ -1,6 +1,7 @@
 ﻿using Harjoitukset.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -28,7 +29,10 @@ namespace Harjoitukset
 	{
 		public MainPage()
 		{
-			this.InitializeComponent(); 
+			this.InitializeComponent();
+
+			// Avataan ohjelman ensimmäinen sivu
+			if (!NavigateToView("Contents")) return;
 		}
 		// Näyttää ohjelman tiedot
 		private void About_Click(object sender, RoutedEventArgs e)
@@ -45,8 +49,8 @@ namespace Harjoitukset
 
 		private void GoHome_Click(object sender, RoutedEventArgs e)
 		{
-			// Navigoidaan ensimmäiselle sivulle
-			this.Frame.Navigate(typeof(Contents));
+			// Avataan ohjelman ensimmäinen sivu
+			if (!NavigateToView("Contents")) return;
 		}
 
 		// Sulkee ohjelman
@@ -103,7 +107,7 @@ namespace Harjoitukset
 			// jos Itemistä ei löydy Tagia, oletuksena on silloin Settings
 			// tässä tapauksessa settingsview on otettu pois käytöstä myös XAMLin puolella
 			var clickedView = item.Tag?.ToString() ?? "SettingsView";
-
+			
 			// jos navigointi epäonnistuu, jätetään kesken
 			if (!NavigateToView(clickedView)) return;
 
