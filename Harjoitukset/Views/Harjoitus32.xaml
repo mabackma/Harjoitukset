@@ -25,22 +25,24 @@
                 (klikkaa tapahtumaa saadaksesi lisätiedot)
             </TextBlock>
         </StackPanel>
-        
-        <StackPanel Grid.Row="1">
-            <ListView x:Name="EventsListView" ItemsSource="{x:Bind ViewModel.Events}">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="local_root:Event">
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <SymbolIcon Symbol="CalendarDay" Margin="0,0,12,0"/>
-                            <StackPanel>
-                                <TextBlock Text="{x:Bind OneLineSummary}"/>
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <ListView x:Name="EventsListView" ItemsSource="{x:Bind ViewModel.Events}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local_root:Event">
+                            <StackPanel Orientation="Horizontal" Margin="6">
+                                <SymbolIcon Symbol="CalendarDay" Margin="0,0,12,0"/>
+                                <StackPanel>
+                                    <TextBlock Text="{x:Bind OneLineSummary}"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackPanel>
-
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
         <StackPanel Grid.Row="2" DataContext="{Binding SelectedItem, ElementName=EventsListView}" Margin="20,0,0,20">
             <TextBlock FontWeight="Bold" Text="{Binding EvTime}"/>
             <TextBlock FontWeight="Bold" Text="{Binding EvName}"/>

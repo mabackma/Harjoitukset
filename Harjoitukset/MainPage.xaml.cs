@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Harjoitukset.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,7 +28,7 @@ namespace Harjoitukset
 	{
 		public MainPage()
 		{
-			this.InitializeComponent();
+			this.InitializeComponent(); 
 		}
 
 		// tämä pitää kirjaa siitä mitä sivua viimeksi käytettiin
@@ -93,6 +95,7 @@ namespace Harjoitukset
 			if (ContentFrame.CanGoBack)
 				ContentFrame.GoBack();
 		}
+
 	}
 
 	// oma poikkeustyyppi navigointiongelmille
@@ -103,4 +106,5 @@ namespace Harjoitukset
 
 		}
 	}
+
 }

@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Harjoitus_lisa2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <MenuBar Grid.Row="0" VerticalAlignment="Top">
+            <MenuBarItem Title="Navigate">
+                <MenuFlyoutItem Name="GoHome"
+                                Text="Home"
+                                Icon="Home"
+                                Click="GoHome_Click">
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Name="ExitProgram"
+                                Text="Exit"
+                                Icon="ClosePane"
+                                Click="ExitProgram_ClickAsync">
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem Title="Options">
+                <MenuFlyoutItem Name="DarkMode"
+                                Text="Dark Mode"
+                                Icon="Setting"
+                                Click="DarkMode_Click">
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Name="About" Text="About" Icon="Comment" Click="About_Click"/>
+            </MenuBarItem>
+        </MenuBar>
+    </Grid>
+</Page>

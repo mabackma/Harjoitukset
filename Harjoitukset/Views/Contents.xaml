@@ -1,0 +1,125 @@
+﻿<Page
+    x:Class="Harjoitukset.Views.Contents"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Harjoitukset.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                  HorizontalScrollBarVisibility="Auto">
+        <StackPanel>
+            <TextBlock Margin="20"
+                   FontSize="60"
+                   FontWeight="Bold">
+            Sisällysluettelo
+            </TextBlock>
+            <TextBlock Margin="20, 20, 0, 0"
+                   FontSize="20"
+                   FontWeight="Bold">
+            Harjoitus 1
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 1 Yksinkertainen laskin
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 2 RelativePanel
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 3 RelativePanel ulkoasu
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 4 Vasen/oikeapuoli Gridillä
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 5 ComboBox: värilaatikko
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 6 Laskimen ulkoasu
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 7 Nappi joka tuottaa satunnaislukuja
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 8 Laskimen lisätoiminnot
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 9 MediaElement, WebView, Canvas, DatePicker
+            </TextBlock>
+            <TextBlock Margin="20, 20, 0, 0"
+                   FontSize="20"
+                   FontWeight="Bold">
+            Harjoitus 2
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 1 Tapahtuman käsittely: TextChanged
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 2 Tapahtuman käsittely: PointerEntered/PointerExited
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 3 Tapahtuman käsittely: SelectionChanged, numeroiden summa
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 4 Tapahtuman käsittely: Checked/Unchecked
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 5 Tapahtuman käsittely: ValueChanged
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 7 Dark mode
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 8 Ohelman sulkeminen
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 9 Focus
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 10 Drag and drop
+            </TextBlock>
+            <TextBlock Margin="20, 20, 0, 0"
+                   FontSize="20"
+                   FontWeight="Bold">
+            Harjoitus 3
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 1a Yksittäisten tietojen data binding: Satunnainen salasana ja turha fakta
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 1b Yksittäisten tietojen data binding: Slider, TextBlock ja ProgressBar
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 1 lisätehtävät - Yksittäisten tietojen data binding: Kuvan valinta ComboBoxilla, Värin valinta ComboBoxilla, Tekstin tallennus tiedostoon
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 2 Kokoelmat: data binding ja valitun tapahtuman yksityiskohdat
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Tehtävä 3 Carousel, AttachedDropShadow, EyeDropper
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Lisätehtävä 1 Data binding: DatePicker joka näyttää kuvan vuodenajasta
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Lisätehtävä 2 Data binding: Eri maiden tiedot rajapinnasta
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Lisätehtävä 3 Data binding: Kolmannen osapuolen controlit
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Lisätehtävä 4 Data binding: JSON tallennus tiedostoon
+            </TextBlock>
+            <TextBlock Margin="20, 20, 0, 0"
+                   FontSize="20"
+                   FontWeight="Bold">
+            Ylimääräiset lisätehtävät
+            </TextBlock>
+            <TextBlock Margin="20, 0, 0, 20">
+            Lisätehtävä 2 MainMenu valikko
+            </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

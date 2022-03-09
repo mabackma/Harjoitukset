@@ -16,6 +16,8 @@
 					IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
 
             <NavigationView.MenuItems>
+                <NavigationViewItem Content="Sisällysluettelo" Icon="Home" Tag="Contents"/>
+                <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Harjoitus 1"/>
                 <NavigationViewItem Content="Tehtävä 1" Icon="Document" Tag="Harjoitus11"/>
                 <NavigationViewItem Content="Tehtävä 2" Icon="Document" Tag="Harjoitus12"/>
@@ -60,7 +62,9 @@
                 <NavigationViewItem Content="T2 JSON: Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
                 <NavigationViewItem Content="T3 Binding: RadialGauge" Icon="Favorite" Tag="Harjoitus36"/>
                 <NavigationViewItem Content="T3 JSON: Tallennus" Icon="Favorite" Tag="Harjoitus37"/>
-
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Ylimääräiset lisätehtävät"/>
+                <NavigationViewItem Content="T2 MainMenu" Icon="Favorite" Tag="Harjoitus_lisa2"/>
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame" 
