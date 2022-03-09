@@ -9,11 +9,41 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView x:Name="NavView" 
-					ItemInvoked="NavigationView_OnItemInvoked"
-					BackRequested="NavView_OnBackRequested"
-					IsSettingsVisible="False"
-					IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <MenuBar Grid.Row="0" VerticalAlignment="Top">
+            <MenuBarItem Title="Navigate">
+                <MenuFlyoutItem Name="GoHome"
+                                Text="Home"
+                                Icon="Home"
+                                Click="GoHome_Click">
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Name="ExitProgram"
+                                Text="Exit"
+                                Icon="ClosePane"
+                                Click="ExitProgram_ClickAsync">
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem Title="Options">
+                <MenuFlyoutItem Name="DarkMode"
+                                Text="Dark Mode"
+                                Icon="Setting"
+                                Click="DarkMode_Click">
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Name="About" Text="About" Icon="Comment" Click="About_Click"/>
+            </MenuBarItem>
+        </MenuBar>
+        
+        <NavigationView Grid.Row="1" 
+                        x:Name="NavView" 
+					    ItemInvoked="NavigationView_OnItemInvoked"
+					    BackRequested="NavView_OnBackRequested"
+					    IsSettingsVisible="False"
+					    IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
 
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Sisällysluettelo" Icon="Home" Tag="Contents"/>
@@ -41,8 +71,6 @@
                 <NavigationViewItem Content="Tehtävä 4" Icon="Document" Tag="Harjoitus24"/>
                 <NavigationViewItem Content="Tehtävä 5" Icon="Document" Tag="Harjoitus25"/>
                 <NavigationViewItemHeader Content="H2 Lisätehtävät"/>
-                <NavigationViewItem Content="T7 Dark Mode" Icon="Favorite" Tag="Harjoitus27"/>
-                <NavigationViewItem Content="T8 Sulje ohjelma" Icon="Favorite" Tag="Harjoitus28"/>
                 <NavigationViewItem Content="T9 Focus" Icon="Favorite" Tag="Harjoitus29"/>
                 <NavigationViewItem Content="T10 Drag and Drop" Icon="Favorite" Tag="Harjoitus210"/>
                 <NavigationViewItemSeparator/>
@@ -62,9 +90,6 @@
                 <NavigationViewItem Content="T2 JSON: Valtion tiedot" Icon="Favorite" Tag="Harjoitus35"/>
                 <NavigationViewItem Content="T3 Binding: RadialGauge" Icon="Favorite" Tag="Harjoitus36"/>
                 <NavigationViewItem Content="T3 JSON: Tallennus" Icon="Favorite" Tag="Harjoitus37"/>
-                <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Ylimääräiset lisätehtävät"/>
-                <NavigationViewItem Content="T2 MainMenu" Icon="Favorite" Tag="Harjoitus_lisa2"/>
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame" 

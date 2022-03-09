@@ -182,12 +182,6 @@
     <Compile Include="Views\Harjoitus25.xaml.cs">
       <DependentUpon>Harjoitus25.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Harjoitus27.xaml.cs">
-      <DependentUpon>Harjoitus27.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Harjoitus28.xaml.cs">
-      <DependentUpon>Harjoitus28.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Harjoitus29.xaml.cs">
       <DependentUpon>Harjoitus29.xaml</DependentUpon>
     </Compile>
@@ -229,9 +223,6 @@
     </Compile>
     <Compile Include="Views\Harjoitus37.xaml.cs">
       <DependentUpon>Harjoitus37.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Harjoitus_lisa2.xaml.cs">
-      <DependentUpon>Harjoitus_lisa2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Weather.cs" />
     <Compile Include="WeatherViewModel.cs" />
@@ -348,14 +339,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Harjoitus27.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Harjoitus28.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Harjoitus29.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -409,10 +392,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Harjoitus37.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Harjoitus_lisa2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

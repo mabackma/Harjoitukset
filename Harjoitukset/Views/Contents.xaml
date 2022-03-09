@@ -69,10 +69,10 @@
             Tehtävä 5 Tapahtuman käsittely: ValueChanged
             </TextBlock>
             <TextBlock Margin="20, 0, 0, 0">
-            Tehtävä 7 Dark mode
+            Tehtävä 7 Dark mode LISÄTTY MENU BAR VALIKKOON!
             </TextBlock>
             <TextBlock Margin="20, 0, 0, 0">
-            Tehtävä 8 Ohelman sulkeminen
+            Tehtävä 8 Ohelman sulkeminen LISÄTTY MENU BAR VALIKKOON!
             </TextBlock>
             <TextBlock Margin="20, 0, 0, 0">
             Tehtävä 9 Focus
@@ -118,7 +118,7 @@
             Ylimääräiset lisätehtävät
             </TextBlock>
             <TextBlock Margin="20, 0, 0, 20">
-            Lisätehtävä 2 MainMenu valikko
+            Lisätehtävä 2 MenuBar valikko LISÄTTY MAINPAGEEN!
             </TextBlock>
         </StackPanel>
     </ScrollViewer>
