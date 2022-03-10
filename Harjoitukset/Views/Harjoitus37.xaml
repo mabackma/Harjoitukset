@@ -64,8 +64,20 @@
             </TextBlock>
             <ComboBox Name="positionDetails"
                       Margin="20, 10, 20, 10" 
+                      Width="150"
+                      SelectedIndex="{x:Bind GetWorkTypeFromJson(TextValue), Mode=OneWay}"
                       RelativePanel.Below="birthYear"
-                      RelativePanel.RightOf="position"/>
+                      RelativePanel.RightOf="position">
+                <ComboBoxItem Name="intern">
+                    Harjoittelija
+                </ComboBoxItem>
+                <ComboBoxItem Name="worker">
+                    Työntekijä
+                </ComboBoxItem>
+                <ComboBoxItem Name="supervisor">
+                    Esimies
+                </ComboBoxItem>
+            </ComboBox>
 
             <TextBlock Name="salary"
                        Margin="20, 10, 20, 10"  
@@ -93,13 +105,15 @@
             <RadioButton Name="notPartTime"
                          Margin="20, 10, 20, 0" 
                          RelativePanel.Below="salary"
-                         RelativePanel.RightOf="partTime">
+                         RelativePanel.RightOf="partTime"
+                         IsChecked="{x:Bind GetNotPartTimeFromJson(TextValue), Mode=OneWay}">
                 Ei
             </RadioButton>
             <RadioButton Name="isPartTime"
                          Margin="20, 0, 20, 10" 
                          RelativePanel.Below="notPartTime"
-                         RelativePanel.RightOf="partTime">
+                         RelativePanel.RightOf="partTime"
+                         IsChecked="{x:Bind GetPartTimeFromJson(TextValue), Mode=OneWay}">
                 Kyllä
             </RadioButton>
 
@@ -114,7 +128,8 @@
             <CheckBox Name="isActiveDetails"
                       Margin="20, 0, 20, 10"
                       RelativePanel.Below="isPartTime"
-                      RelativePanel.RightOf="isActive">
+                      RelativePanel.RightOf="isActive"
+                      IsChecked="{x:Bind GetActiveFromJson(TextValue), Mode=OneWay}">
                 Aktiivinen
             </CheckBox>
             <Button Name="saveJson"

@@ -26,7 +26,10 @@ namespace Harjoitukset.Views
         public string fName { get; set; }
         public string lName { get; set; }
         public string bYear { get; set; }
+        public int workType { get; set; }
         public string salary { get; set; }
+        public bool partTimeValue { get; set; }
+        public bool activeValue { get; set; }
     }
 
     /// <summary>
@@ -64,12 +67,16 @@ namespace Harjoitukset.Views
  
         public Person createObject()
         {
+
             var obj = new Person
             {
                 fName = firstNameDetails.Text,
                 lName = lastNameDetails.Text,
                 bYear = birthYearDetails.Text,
-                salary = salaryDetails.Text
+                workType = positionDetails.SelectedIndex,
+                salary = salaryDetails.Text,
+                partTimeValue = (bool)isPartTime.IsChecked,
+                activeValue = (bool)isActiveDetails.IsChecked
             };
 
             return obj;
@@ -103,6 +110,15 @@ namespace Harjoitukset.Views
             return person.bYear;
         }
 
+        // Palauttaa työntekijän indexin (harjoittelija: 0, työntekijä: 1, esimies: 2)
+        public int GetWorkTypeFromJson(string txt)
+        {
+            if (txt == null)
+                return 0;
+            Person person = JsonSerializer.Deserialize<Person>(txt);
+            return person.workType;
+        }
+
         // Palauttaa JSON stringistä kuukausipalkan
         public string GetSalaryFromJson(string txt)
         {
@@ -112,6 +128,32 @@ namespace Harjoitukset.Views
             return person.salary;
         }
 
+        // Palauttaa True jos työntekijä on osa-aikainen.
+        public bool GetPartTimeFromJson(string txt)
+        {
+            if (txt == null)
+                return false;
+            Person person = JsonSerializer.Deserialize<Person>(txt);
+            return person.partTimeValue;
+        }
+
+        // Palauttaa False jos työntekijä on osa-aikainen.
+        public bool GetNotPartTimeFromJson(string txt)
+        {
+            if (txt == null)
+                return false;
+            Person person = JsonSerializer.Deserialize<Person>(txt);
+            return !person.partTimeValue;
+        }
+
+        // Palauttaa True jos työntekijä on aktiivinen.
+        public bool GetActiveFromJson(string txt)
+        {
+            if (txt == null)
+                return false;
+            Person person = JsonSerializer.Deserialize<Person>(txt);
+            return person.activeValue;
+        }
         private async System.Threading.Tasks.Task ReadFileAsync()
         {
             // haetaan Windowsista kansio, johon tällä ohjelmalla on kirjoitusoikeus
