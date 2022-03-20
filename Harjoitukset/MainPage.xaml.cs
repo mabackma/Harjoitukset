@@ -38,7 +38,7 @@ namespace Harjoitukset
 		private void About_Click(object sender, RoutedEventArgs e)
 		{
 			// Initialize a new text for message dialog
-			string message = "Version 1.0";
+			string message = "Version 1.0 Copyright Lapin AMK";
 
 			// Initialize a new MessageDialog instance
 			MessageDialog messageDialog = new MessageDialog(message, "C#/UWP Tehtävät");
