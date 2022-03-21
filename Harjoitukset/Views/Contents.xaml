@@ -11,10 +11,16 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" 
                   HorizontalScrollBarVisibility="Auto">
         <StackPanel>
-            <!-- Otsikon kielen voi vaihtaa MenuBarista -->
-            <TextBlock x:Uid="Contents" Margin="20"
-                   FontSize="60"
-                   FontWeight="Bold">
+            <!-- Otsikon kielen voi vaihtaa-->
+            <Button Margin="20, 0, 0, 0"
+                    Name="Localization"
+                    Click="Localization_Click">
+                FI/EN
+            </Button>
+            <TextBlock x:Uid="Contents" 
+                       Margin="20"
+                       FontSize="60"
+                       FontWeight="Bold">
             Sisällysluettelo
             </TextBlock>
             <TextBlock Margin="20, 20, 0, 0"

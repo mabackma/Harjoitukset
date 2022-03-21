@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,20 @@ namespace Harjoitukset.Views
         public Contents()
         {
             this.InitializeComponent();
+        }
+
+        private void Localization_Click(object sender, RoutedEventArgs e)
+        {
+            if (ApplicationLanguages.PrimaryLanguageOverride == "fi")
+            {
+                ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+            }
+            else 
+            { 
+                ApplicationLanguages.PrimaryLanguageOverride = "fi";
+            }
+
+            Frame.Navigate(this.GetType());
         }
     }
 }
