@@ -32,6 +32,11 @@
                                 Icon="Setting"
                                 Click="DarkMode_Click">
                 </MenuFlyoutItem>
+                <MenuFlyoutItem Name="Localization"
+                                Text="FI/EN"
+                                Icon="Setting"
+                                Click="Localization_Click">
+                </MenuFlyoutItem>
             </MenuBarItem>
             <MenuBarItem Title="Help">
                 <MenuFlyoutItem Name="About" Text="About" Icon="Comment" Click="About_Click"/>

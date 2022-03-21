@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -149,10 +150,20 @@ namespace Harjoitukset
 				ContentFrame.GoBack();
 		}
 
-	}
+		// Muuttaa kielen englanniksi tai suomeksi
+        private void Localization_Click(object sender, RoutedEventArgs e)
+        {
+			if(ApplicationLanguages.PrimaryLanguageOverride == "fi")
+				ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+			else
+				ApplicationLanguages.PrimaryLanguageOverride = "fi";
+			Frame.Navigate(this.GetType());
 
-	// oma poikkeustyyppi navigointiongelmille
-	internal class NavigationException : Exception
+        }
+    }
+
+    // oma poikkeustyyppi navigointiongelmille
+    internal class NavigationException : Exception
 	{
 		public NavigationException(string msg) : base(msg)
 		{

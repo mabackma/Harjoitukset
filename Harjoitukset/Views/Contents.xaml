@@ -11,7 +11,8 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" 
                   HorizontalScrollBarVisibility="Auto">
         <StackPanel>
-            <TextBlock Margin="20"
+            <!-- Otsikon kielen voi vaihtaa MenuBarista -->
+            <TextBlock x:Uid="Contents" Margin="20"
                    FontSize="60"
                    FontWeight="Bold">
             Sisällysluettelo
@@ -117,8 +118,11 @@
                    FontWeight="Bold">
             Ylimääräiset lisätehtävät
             </TextBlock>
+            <TextBlock Margin="20, 0, 0, 0">
+            Lisätehtävä 2: MainMenu (Home, About, Exit) lisätty MenuBariin
+            </TextBlock>
             <TextBlock Margin="20, 0, 0, 20">
-            Lisätehtävä 2 MenuBar valikko LISÄTTY MAINPAGEEN!
+            Lisätehtävä 4: Lokalisaatio tämän sivun otsikolle lisätty MenuBariin
             </TextBlock>
         </StackPanel>
     </ScrollViewer>
