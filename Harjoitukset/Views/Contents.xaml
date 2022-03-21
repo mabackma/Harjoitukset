@@ -20,9 +20,7 @@
             <TextBlock x:Uid="Contents" 
                        Margin="20"
                        FontSize="60"
-                       FontWeight="Bold">
-            Sisällysluettelo
-            </TextBlock>
+                       FontWeight="Bold"/>
             <TextBlock Margin="20, 20, 0, 0"
                    FontSize="20"
                    FontWeight="Bold">
