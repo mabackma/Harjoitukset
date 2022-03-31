@@ -126,7 +126,7 @@
             Lisätehtävä 2: MainMenu (Home, About, Exit) lisätty MenuBariin
             </TextBlock>
             <TextBlock Margin="20, 0, 0, 20">
-            Lisätehtävä 4: Lokalisaatio tämän sivun otsikolle lisätty MenuBariin
+            Lisätehtävä 4: Lokalisaationappi lisätty tämän sivun otsikolle
             </TextBlock>
         </StackPanel>
     </ScrollViewer>
