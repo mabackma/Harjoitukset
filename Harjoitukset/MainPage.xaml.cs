@@ -29,6 +29,8 @@ namespace Harjoitukset
 	{
 		public MainPage()
 		{
+			// ohjaajan lisäämä kommentti
+			// tämä on ok!
 			this.InitializeComponent();
 
 			// Avataan ohjelman ensimmäinen sivu
