@@ -69,13 +69,13 @@ namespace Harjoitukset.Views
         // apumetodi, joka muuttaa tekstin kuvaksi
         // object orig voi olla esim. XAML-Cntrolin Tag-property, 
         // sillä se kääntyy helposti String-muotoon!
-        public ImageSource StringToImage(object orig)
+        public ImageSource StringToImage(String orig)
         {
             BitmapImage image = new BitmapImage(new Uri(@"ms-appx:///Assets/autumn.jpg"));
             try
             {
-                String path = orig as String;
-                image = new BitmapImage(new Uri(@"ms-appx:///Assets/" + path));
+                //String path = orig as String;
+                image = new BitmapImage(new Uri(@"ms-appx:///Assets/" + orig));
             }
             catch (Exception e)
             {
